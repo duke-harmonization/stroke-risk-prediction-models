@@ -1,0 +1,81 @@
+1                                                          The SAS System                          13:23 Wednesday, February 6, 2019
+
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS1M5) 
+      Licensed to DUKE UNIVERSITY - T&R - SFA - NCICU GRANT, Site 70082792.
+NOTE: This session is executing on the Linux 2.6.32-754.9.1.el6.x86_64 (LIN X64) platform.
+
+
+
+NOTE: Updated analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 2.6.32-754.9.1.el6.x86_64 #1 SMP Wed Nov 21 15:08:21 EST 2018 x86_64 Red Hat Enterprise Linux Server release 6.10 
+      (Santiago) 
+
+You are running SAS 9. Some SAS 8 files will be automatically converted 
+by the V9 engine; others are incompatible.  Please see 
+http://support.sas.com/rnd/migration/planning/platform/64bit.html
+
+PROC MIGRATE will preserve current SAS file attributes and is 
+recommended for converting all your SAS libraries from any 
+SAS 8 release to SAS 9.  For details and examples, please see
+http://support.sas.com/rnd/migration/index.html
+
+
+This message is contained in the SAS news file, and is presented upon
+initialization.  Edit the file "news" in the "misc/base" directory to
+display site-specific news and information in the program log.
+The command line option "-nonews" will prevent this display.
+
+
+
+
+NOTE: SAS initialization used:
+      real time           0.04 seconds
+      cpu time            0.02 seconds
+      
+1          libname template "/sigmadata/r_regeneron/manu/ims_model/programs/templates";
+NOTE: Libref TEMPLATE was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /sigmadata/r_regeneron/manu/ims_model/programs/templates
+2          
+3          proc template;
+4              define style grayborders / store=template.tables;
+5              parent = styles.analysis;
+6          
+7             style Table /
+8                cellpadding = 3
+9                borderspacing = 0
+10               frame = box
+11               rules = all
+12               bordertopwidth = 1px
+13               borderleftwidth = 1px
+2                                                          The SAS System                          13:23 Wednesday, February 6, 2019
+
+14               borderbottomwidth = 0px
+15               borderrightwidth = 0px
+16               bordercolor = lightgray
+17               bordercollapse = separate
+18               borderstyle = solid;
+19               end;
+NOTE: Overwriting existing template/link: Grayborders
+NOTE: STYLE 'Grayborders' has been saved to: TEMPLATE.TABLES
+20         run;
+NOTE: PROCEDURE TEMPLATE used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.02 seconds
+      
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           0.07 seconds
+      cpu time            0.04 seconds
+      
